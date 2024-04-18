@@ -17,6 +17,7 @@ resource "aws_subnet" "name" {
   cidr_block = var.mysubnetcidr
   vpc_id = aws_vpc.myvpc.id
   depends_on = [ aws_vpc.myvpc ]
+  availability_zone = "ap-south-1a"
 }
 
 resource "aws_instance" "myvm" {
